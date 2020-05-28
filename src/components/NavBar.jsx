@@ -1,7 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const NavBar = () => (
+const navigations = [
+  { name: 'About', href: '#' },
+  { name: 'History', href: '#' },
+  { name: 'Recruit', href: '#' },
+  { name: 'Contact', href: '#' },
+];
+
+const NavBar = (props) => (
   <NavBarContainer>
     <LogoContainer href="/">
       <LogoSymbol src="./static/logo_symbol.svg" />
@@ -9,10 +16,9 @@ const NavBar = () => (
     </LogoContainer>
 
     <NavList>
-      <NavItem href="#">About</NavItem>
-      <NavItem href="#">History</NavItem>
-      <NavItem href="#">Recruit</NavItem>
-      <NavItem href="#">Contact</NavItem>
+      {navigations.map(({ name, href }) => (
+        <NavItem href="{href}">{name}</NavItem>
+      ))}
     </NavList>
   </NavBarContainer>
 );
