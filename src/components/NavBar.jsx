@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import theme from 'styled-theming';
 
 const navigations = [
   { name: 'About', href: '#' },
@@ -8,21 +9,41 @@ const navigations = [
   { name: 'Contact', href: '#' },
 ];
 
-const NavBar = (props) => (
-  <NavBarContainer dark={props.dark}>
-    <LogoContainer href="/">
-      <LogoSymbol dark={props.dark} />
-      <LogoText dark={props.dark}>IMPLUDE</LogoText>
-    </LogoContainer>
+const textColor = theme('mode', {
+  light: 'black',
+  dark: 'white',
+});
 
-    <NavList>
-      {navigations.map(({ name, href }) => (
-        <NavItem dark={props.dark} href={href}>
-          {name}
-        </NavItem>
-      ))}
-    </NavList>
-  </NavBarContainer>
+const backgroundColor = theme('mode', {
+  light: '#fff',
+  dark: 'transparent',
+});
+
+const shadow = theme('mode', {
+  light: '0 3px 6px 0 rgba(0, 0, 0, 0.16)',
+  dark: 'unset',
+});
+
+const logo = theme('mode', {
+  light: './static/logo_symbol.svg',
+  dark: './static/logo_symbol_dark.svg',
+});
+
+const NavBar = (props) => (
+  <ThemeProvider theme={{ mode: props.dark ? 'dark' : 'light' }}>
+    <NavBarContainer>
+      <LogoContainer href="/">
+        <LogoSymbol />
+        <LogoText>IMPLUDE</LogoText>
+      </LogoContainer>
+
+      <NavList>
+        {navigations.map(({ name, href }) => (
+          <NavItem href={href}>{name}</NavItem>
+        ))}
+      </NavList>
+    </NavBarContainer>
+  </ThemeProvider>
 );
 
 export default NavBar;
@@ -34,9 +55,8 @@ const NavBarContainer = styled.div`
   width: 100%;
   height: 60px;
   align-items: center;
-  box-shadow: ${(props) =>
-    props.dark ? 'unset' : '0 3px 6px 0 rgba(0, 0, 0, 0.16)'};
-  background: ${(props) => (props.dark ? 'transparent' : '#fff')};
+  box-shadow: ${shadow};
+  background: ${backgroundColor};
 `;
 
 const LogoContainer = styled.a`
@@ -49,16 +69,13 @@ const LogoContainer = styled.a`
 const LogoSymbol = styled.div`
   width: 25px;
   height: 25px;
-  background-image: ${(props) =>
-    props.dark
-      ? 'url(./static/logo_symbol_dark.svg)'
-      : 'url(./static/logo_symbol.svg)'};
+  background-image: url(${logo});
 `;
 
 const LogoText = styled.span`
   margin-left: 10px;
   font-weight: bold;
-  color: ${(props) => (props.dark ? 'white' : 'black')};
+  color: ${textColor};
 `;
 
 const NavList = styled.nav`
@@ -74,5 +91,5 @@ const NavItem = styled.a`
   padding: 5px 0 5px 20px;
   font-weight: 300;
   vertical-align: center;
-  color: ${(props) => (props.dark ? 'white' : 'black')};
+  color: ${textColor};
 `;
