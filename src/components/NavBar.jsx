@@ -9,15 +9,17 @@ const navigations = [
 ];
 
 const NavBar = (props) => (
-  <NavBarContainer>
+  <NavBarContainer dark={props.dark}>
     <LogoContainer href="/">
-      <LogoSymbol src="./static/logo_symbol.svg" />
-      <LogoText>IMPLUDE</LogoText>
+      <LogoSymbol dark={props.dark} />
+      <LogoText dark={props.dark}>IMPLUDE</LogoText>
     </LogoContainer>
 
     <NavList>
       {navigations.map(({ name, href }) => (
-        <NavItem href="{href}">{name}</NavItem>
+        <NavItem dark={props.dark} href={href}>
+          {name}
+        </NavItem>
       ))}
     </NavList>
   </NavBarContainer>
@@ -31,9 +33,10 @@ const NavBarContainer = styled.div`
   display: flex;
   width: 100%;
   height: 60px;
-  background: white;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   align-items: center;
+  box-shadow: ${(props) =>
+    props.dark ? 'unset' : '0 3px 6px 0 rgba(0, 0, 0, 0.16)'};
+  background: ${(props) => (props.dark ? 'transparent' : '#fff')};
 `;
 
 const LogoContainer = styled.a`
@@ -43,14 +46,19 @@ const LogoContainer = styled.a`
   align-items: center;
 `;
 
-const LogoSymbol = styled.img`
+const LogoSymbol = styled.div`
   width: 25px;
   height: 25px;
+  background-image: ${(props) =>
+    props.dark
+      ? 'url(./static/logo_symbol_dark.svg)'
+      : 'url(./static/logo_symbol.svg)'};
 `;
 
 const LogoText = styled.span`
   margin-left: 10px;
   font-weight: bold;
+  color: ${(props) => (props.dark ? 'white' : 'black')};
 `;
 
 const NavList = styled.nav`
@@ -66,4 +74,5 @@ const NavItem = styled.a`
   padding: 5px 0 5px 20px;
   font-weight: 300;
   vertical-align: center;
+  color: ${(props) => (props.dark ? 'white' : 'black')};
 `;
