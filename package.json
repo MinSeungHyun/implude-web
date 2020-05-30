@@ -9,7 +9,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "styled-theming": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
