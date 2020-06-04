@@ -1,12 +1,13 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import theme from 'styled-theming';
+import { Link } from 'react-router-dom';
 
 const navigations = [
-  { name: 'About', href: '#' },
-  { name: 'History', href: '#' },
-  { name: 'Recruit', href: '#' },
-  { name: 'Contact', href: '#' },
+  { name: 'About', href: '/about' },
+  { name: 'History', href: '/history' },
+  { name: 'Recruit', href: '/recruit' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 const textColor = theme('mode', {
@@ -32,14 +33,18 @@ const logo = theme('mode', {
 const NavBar = (props) => (
   <ThemeProvider theme={{ mode: props.dark ? 'dark' : 'light' }}>
     <NavBarContainer>
-      <LogoContainer href="/">
-        <LogoSymbol />
-        <LogoText>IMPLUDE</LogoText>
-      </LogoContainer>
+      <Link to="/">
+        <LogoContainer>
+          <LogoSymbol />
+          <LogoText>IMPLUDE</LogoText>
+        </LogoContainer>
+      </Link>
 
       <NavList>
         {navigations.map(({ name, href }) => (
-          <NavItem href={href}>{name}</NavItem>
+          <NavItem>
+            <Link to={href}>{name}</Link>
+          </NavItem>
         ))}
       </NavList>
     </NavBarContainer>
