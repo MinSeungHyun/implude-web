@@ -1,22 +1,32 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const LandingPage = () => (
-  <Content>
-    <NavBar dark />
-    <Title>
-      상상한 대로 만들어라,
-      <br />
-      #IMPLUDE
-    </Title>
-    <MockupWrapper>
-      <Mockup src="./static/implude_app_mockup.png" />
-    </MockupWrapper>
-  </Content>
+  <>
+    <LandingPageStyle />
+    <Content>
+      <NavBar dark />
+      <Title>
+        상상한 대로 만들어라,
+        <br />
+        <LogoSymbol />
+        IMPLUDE
+      </Title>
+      <MockupWrapper>
+        <Mockup src="./static/implude_app_mockup.png" />
+      </MockupWrapper>
+    </Content>
+  </>
 );
 
 export default LandingPage;
+
+const LandingPageStyle = createGlobalStyle`
+body {
+  overflow: hidden;
+}
+`;
 
 const gradientRatio = '45%';
 
@@ -50,4 +60,15 @@ const MockupWrapper = styled.div`
 const Mockup = styled.img`
   height: 100%;
   margin-left: -8%;
+`;
+
+const LogoSize = '2.6vw';
+const LogoSymbol = styled.div`
+  display: inline-block;
+  width: ${LogoSize};
+  height: ${LogoSize};
+  margin-right: 0.5vw;
+  background-image: url('./static/logo_symbol_dark.svg');
+  background-repeat: no-repeat;
+  filter: brightness(0) invert(1);
 `;
