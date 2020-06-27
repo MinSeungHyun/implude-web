@@ -56,12 +56,16 @@ export default NavBar;
 const horizontalMargin = '40px';
 
 const NavBarContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   width: 100%;
-  height: 60px;
+  height: var(--nav-height);
   align-items: center;
   box-shadow: ${shadow};
   background: ${backgroundColor};
+  z-index: 99;
 `;
 
 const LogoContainer = styled.a`
