@@ -4,13 +4,18 @@ body {
   margin: 0;
 }
 
-span,
-a,
-p {
+* {
   font-family: 'Noto Sans KR';
 }
 
 a {
   color: unset;
   text-decoration: none;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
