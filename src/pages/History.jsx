@@ -1,14 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavBar from '../components/NavBar';
 import { Parallax } from 'react-parallax';
+import NavBar from '../components/NavBar';
+import HistoryItem from '../components/HistoryItem';
+import historyData from '../data/history.json';
 
 const HistoryPage = () => (
   <>
     <NavBar />
     <ParallaxMasthead />
+    <SubTitle>{historyData.subTitle}</SubTitle>
+    <History>
+      {historyData.histories.map((data) => (
+        <HistoryItem itemData={data} />
+      ))}
+    </History>
   </>
 );
+
+export default HistoryPage;
 
 const ParallaxMasthead = () => (
   <Parallax
@@ -25,7 +35,7 @@ const ParallaxMasthead = () => (
   >
     <Masthead>
       <MastheadSubTitle>History</MastheadSubTitle>
-      <MastheadTitle>2016 - 2020</MastheadTitle>
+      <MastheadTitle>{historyData.title}</MastheadTitle>
     </Masthead>
   </Parallax>
 );
@@ -54,4 +64,15 @@ const MastheadSubTitle = styled.span`
   font-weight: 500;
 `;
 
-export default HistoryPage;
+const SubTitle = styled.span`
+  display: block;
+  font-weight: 300;
+  margin: 3rem 5rem;
+  text-align: center;
+`;
+
+const History = styled.div`
+  max-width: 1300px;
+  padding: 0 4rem;
+  margin: 0 auto;
+`;
