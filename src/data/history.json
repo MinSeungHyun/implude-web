@@ -1,0 +1,26 @@
+{
+  "title": "2016 - 2020",
+  "subTitle": "임플루드는 첨단 기술과 혁신 서비스, 창의적인 솔루션으로 전 세계에 영감을 주고 새로운 미래를 만들어가고 있습니다.",
+  "histories": [
+    {
+      "title": "2020",
+      "texts": ["item1", "item2", "item3"]
+    },
+    {
+      "title": "2019",
+      "texts": ["item1", "item2", "item3"]
+    },
+    {
+      "title": "2018",
+      "texts": ["item1", "item2", "item3"]
+    },
+    {
+      "title": "2017",
+      "texts": ["item1", "item2", "item3"]
+    },
+    {
+      "title": "2016",
+      "texts": ["item1", "item2", "item3"]
+    }
+  ]
+}
