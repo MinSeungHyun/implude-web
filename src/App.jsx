@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LandingPage from './pages/Landing';
 import AboutPage from './pages/About';
 import HistoryPage from './pages/History';
+import RecruitPage from './pages/Recruit';
 
 const App = () => (
   <Router>
@@ -20,6 +21,10 @@ const App = () => (
 
       <Route exact path="/history">
         <HistoryPage />
+      </Route>
+
+      <Route exact path="/recruit">
+        <RecruitPage />
       </Route>
     </Switch>
   </Router>
