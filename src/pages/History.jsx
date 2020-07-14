@@ -55,6 +55,7 @@ const MastheadTitle = styled.span`
   font-size: 3rem;
   font-weight: 900;
   letter-spacing: 8px;
+  white-space: nowrap;
 `;
 
 const MastheadSubTitle = styled.span`
