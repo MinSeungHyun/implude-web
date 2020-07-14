@@ -31,6 +31,7 @@ const RecruitPage = () => {
 };
 
 const ContentWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,6 +39,10 @@ const ContentWrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  .text-transition {
+    width: 100% !important;
+  }
 
   div,
   span {
