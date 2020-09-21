@@ -5,6 +5,7 @@ import LandingPage from './pages/Landing';
 import AboutPage from './pages/About';
 import HistoryPage from './pages/History';
 import RecruitPage from './pages/Recruit';
+import ContactPage from './pages/Contact';
 
 const App = () => (
   <Router>
@@ -25,6 +26,10 @@ const App = () => (
 
       <Route exact path="/recruit">
         <RecruitPage />
+      </Route>
+
+      <Route exact path="/contact">
+        <ContactPage />
       </Route>
     </Switch>
   </Router>
