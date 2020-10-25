@@ -1,6 +1,30 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar';
+import LinkItem from '../components/LinkItem';
+
+const links = [
+  {
+    icon: './static/facebook.svg',
+    title: '페이스북 페이지',
+    link: 'fb.com/implude',
+  },
+  {
+    icon: './static/messenger.svg',
+    title: '페이스북 메신저',
+    link: 'm.me/implude',
+  },
+  {
+    icon: './static/kakaotalk.svg',
+    title: '카카오톡 1:1 오픈채팅',
+    link: 'open.kakao.com/o/sVon7SXb',
+  },
+  {
+    icon: './static/instagram.svg',
+    title: '인스타그램',
+    link: 'instagram.com/dimigoimplude',
+  },
+];
 
 const ContactPage = () => {
   useEffect(autoHeightTextArea);
@@ -18,7 +42,11 @@ const ContactPage = () => {
       <NavBar />
       <Title>Contact</Title>
       <ContentWrapper>
-        <Links></Links>
+        <Links>
+          {links.map((data) => (
+            <LinkItem itemData={data} />
+          ))}
+        </Links>
         <EmailForm onSubmit={handleEmailSubmit}>
           <EmailTitle>이메일</EmailTitle>
           <TextInput id="emailName" type="text" placeholder="이름" />
@@ -54,10 +82,14 @@ const Title = styled.p`
 const ContentWrapper = styled.div`
   display: flex;
   margin: 5rem 0;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 `;
 
-const Links = styled.div``;
+const Links = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const EmailForm = styled.form`
   width: 20rem;
