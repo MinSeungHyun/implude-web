@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LinkItem = (props) => (
-  <Wrapper href={`https://${props.itemData.link}`}>
+  <Wrapper href={`https://${props.itemData.link}`} target="_blank">
     <Icon src={props.itemData.icon} />
     <Text>{props.itemData.title}</Text>
     <Text>{props.itemData.link}</Text>
