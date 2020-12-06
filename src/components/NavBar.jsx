@@ -1,7 +1,11 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import theme from 'styled-theming';
 import { Link } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
+import { slide as BurgerMenu } from 'react-burger-menu';
+
+const MAX_BURGER_MENU_WIDTH = 600;
 
 const navigations = [
   { name: 'About', href: '/about' },
@@ -30,30 +34,59 @@ const logo = theme('mode', {
   dark: './static/logo_symbol_dark.svg',
 });
 
-const NavBar = (props) => (
-  <ThemeProvider theme={{ mode: props.dark ? 'dark' : 'light' }}>
-    <NavBarContainer>
-      <Link to="/">
-        <LogoContainer>
-          <LogoSymbol />
-          <LogoText>IMPLUDE</LogoText>
-        </LogoContainer>
-      </Link>
+const burgerButtonColor = theme('mode', {
+  light: 'black',
+  dark: 'white',
+});
 
-      <NavList>
-        {navigations.map(({ name, href }) => (
-          <NavItem>
-            <Link to={href}>{name}</Link>
-          </NavItem>
-        ))}
-      </NavList>
-    </NavBarContainer>
-  </ThemeProvider>
-);
+const burgerMenuBackground = theme('mode', {
+  light: 'white',
+  dark: '#181849',
+});
 
+const NavBar = (props) => {
+  const navItems = navigations.map(({ name, href }) => (
+    <NavItem>
+      <Link to={href}>{name}</Link>
+    </NavItem>
+  ));
+
+  return (
+    <ThemeProvider theme={{ mode: props.dark ? 'dark' : 'light' }}>
+      <LocalStyles />
+      <NavBarContainer>
+        <Link to="/">
+          <LogoContainer>
+            <LogoSymbol />
+            <LogoText>IMPLUDE</LogoText>
+          </LogoContainer>
+        </Link>
+
+        <MediaQuery minWidth={MAX_BURGER_MENU_WIDTH + 1}>
+          <NavList>{navItems}</NavList>
+        </MediaQuery>
+        <MediaQuery maxWidth={MAX_BURGER_MENU_WIDTH}>
+          <BurgerMenu right>{navItems}</BurgerMenu>
+        </MediaQuery>
+      </NavBarContainer>
+    </ThemeProvider>
+  );
+};
 export default NavBar;
 
 const horizontalMargin = '40px';
+
+const LocalStyles = createGlobalStyle`
+.bm-burger-bars{
+  background: ${burgerButtonColor}
+}
+.bm-menu {
+  background: ${burgerMenuBackground}
+}
+.bm-cross {
+  background: ${textColor}
+}
+`;
 
 const NavBarContainer = styled.div`
   position: fixed;
