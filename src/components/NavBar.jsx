@@ -106,6 +106,9 @@ const LogoContainer = styled.a`
   display: flex;
   margin-left: ${horizontalMargin};
   align-items: center;
+  @media (max-width: ${MAX_BURGER_MENU_WIDTH + 'px'}) {
+    margin-left: calc((var(--nav-height) - var(--burger-button-size)) / 2);
+  }
 `;
 
 const LogoSymbol = styled.div`
