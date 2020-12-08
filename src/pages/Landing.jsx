@@ -47,6 +47,9 @@ export default LandingPage;
 const LandingPageStyle = createGlobalStyle`
 body {
   overflow: hidden;
+  @media (max-width: ${SMALL_SCREEN_WIDTH + 'px'}) {
+    overflow: unset;
+  }
 }
 `;
 
