@@ -2,9 +2,8 @@ import React from 'react';
 import NavBar from '../components/NavBar';
 import styled, { createGlobalStyle } from 'styled-components';
 import MediaQuery from 'react-responsive';
+import { Constants } from '../components/GlobalStyles';
 
-const SMALL_SCREEN_WIDTH = 1200;
-const MOBILE_SCREEN_WIDTH = 600;
 const SUB_TITLE = '상상한 대로 만들어라';
 
 const LandingPage = () => (
@@ -17,10 +16,10 @@ const LandingPage = () => (
           <LogoSymbol />
           IMPLUDE
           <br />
-          <MediaQuery minWidth={SMALL_SCREEN_WIDTH + 1}>
+          <MediaQuery minWidth={Constants.tabletScreenWidth + 1}>
             <SubTitle>{SUB_TITLE}</SubTitle>
           </MediaQuery>
-          <MediaQuery maxWidth={SMALL_SCREEN_WIDTH}>
+          <MediaQuery maxWidth={Constants.tabletScreenWidth}>
             <EqualSpaceSubTitle>
               {[...SUB_TITLE.replaceAll(' ', '')].map((char) => (
                 <span>{char}</span>
@@ -29,12 +28,12 @@ const LandingPage = () => (
           </MediaQuery>
         </Title>
       </TitleWrapper>
-      <MediaQuery minWidth={SMALL_SCREEN_WIDTH + 1}>
+      <MediaQuery minWidth={Constants.tabletScreenWidth + 1}>
         <MockupWrapper>
           <Mockup src="./static/implude_app_mockup.png" />
         </MockupWrapper>
       </MediaQuery>
-      <MediaQuery maxWidth={SMALL_SCREEN_WIDTH}>
+      <MediaQuery maxWidth={Constants.tabletScreenWidth}>
         <MobileMockup />
         <MobileMockupCover />
       </MediaQuery>
@@ -47,7 +46,7 @@ export default LandingPage;
 const LandingPageStyle = createGlobalStyle`
 body {
   overflow: hidden;
-  @media (max-width: ${SMALL_SCREEN_WIDTH + 'px'}) {
+  @media (max-width: ${Constants.tabletScreenWidth + 'px'}) {
     overflow: unset;
   }
 }
@@ -59,7 +58,7 @@ const Content = styled.div`
   width: 100%;
   height: 100vh;
   background: linear-gradient(52.5deg, var(--secondary-color) ${gradientRatio}, var(--primary-color) ${gradientRatio});
-  @media (max-width: ${SMALL_SCREEN_WIDTH + 'px'}) {
+  @media (max-width: ${Constants.tabletScreenWidth + 'px'}) {
     background: var(--secondary-color);
   }
 `;
@@ -70,7 +69,7 @@ const TitleWrapper = styled.div`
   transform: translateY(-50%);
   margin-left: 3%;
   z-index: 5;
-  @media (max-width: ${SMALL_SCREEN_WIDTH + 'px'}) {
+  @media (max-width: ${Constants.tabletScreenWidth + 'px'}) {
     margin: 0;
     left: 0;
     right: 0;
@@ -84,10 +83,10 @@ const Title = styled.div`
   font-weight: bold;
   font-size: 4vw;
   line-height: 1;
-  @media (max-width: ${SMALL_SCREEN_WIDTH + 'px'}) {
+  @media (max-width: ${Constants.tabletScreenWidth + 'px'}) {
     font-size: 4rem;
   }
-  @media (max-width: ${MOBILE_SCREEN_WIDTH + 'px'}) {
+  @media (max-width: ${Constants.mobileScreenWidth + 'px'}) {
     font-size: 2.5rem;
   }
 `;
@@ -145,11 +144,11 @@ const LogoSymbol = styled.div`
   background-image: url('./static/logo_symbol_dark.svg');
   background-repeat: no-repeat;
   filter: brightness(0) invert(1);
-  @media (max-width: ${SMALL_SCREEN_WIDTH + 'px'}) {
+  @media (max-width: ${Constants.tabletScreenWidth + 'px'}) {
     width: 3rem;
     height: 3rem;
   }
-  @media (max-width: ${MOBILE_SCREEN_WIDTH + 'px'}) {
+  @media (max-width: ${Constants.mobileScreenWidth + 'px'}) {
     width: 1.9rem;
     height: 1.9rem;
   }

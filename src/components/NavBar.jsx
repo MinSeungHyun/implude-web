@@ -4,8 +4,7 @@ import theme from 'styled-theming';
 import { Link } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import { slide as BurgerMenu } from 'react-burger-menu';
-
-const MAX_BURGER_MENU_WIDTH = 600;
+import { Constants } from './GlobalStyles';
 
 const navigations = [
   { name: 'About', href: '/about' },
@@ -62,10 +61,10 @@ const NavBar = (props) => {
           </LogoContainer>
         </Link>
 
-        <MediaQuery minWidth={MAX_BURGER_MENU_WIDTH + 1}>
+        <MediaQuery minWidth={Constants.mobileScreenWidth + 1}>
           <NavList>{navItems}</NavList>
         </MediaQuery>
-        <MediaQuery maxWidth={MAX_BURGER_MENU_WIDTH}>
+        <MediaQuery maxWidth={Constants.mobileScreenWidth}>
           <BurgerMenu right>{navItems}</BurgerMenu>
         </MediaQuery>
       </NavBarContainer>
@@ -106,7 +105,7 @@ const LogoContainer = styled.a`
   display: flex;
   margin-left: ${horizontalMargin};
   align-items: center;
-  @media (max-width: ${MAX_BURGER_MENU_WIDTH + 'px'}) {
+  @media (max-width: ${Constants.mobileScreenWidth + 'px'}) {
     margin-left: calc((var(--nav-height) - var(--burger-button-size)) / 2);
   }
 `;

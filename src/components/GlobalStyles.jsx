@@ -36,4 +36,9 @@ const GlobalStyles = createGlobalStyle`
 }
 `;
 
+export const Constants = {
+  tabletScreenWidth: 1200,
+  mobileScreenWidth: 600,
+};
+
 export default GlobalStyles;
