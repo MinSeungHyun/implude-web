@@ -3,24 +3,32 @@
   "subTitle": "임플루드는 첨단 기술과 혁신 서비스, 창의적인 솔루션으로 전 세계에 영감을 주고 새로운 미래를 만들어가고 있습니다.",
   "histories": [
     {
+      "title": "2021",
+      "texts": ["여러분이 역사를 써 내려가실 자리입니다."]
+    },
+    {
       "title": "2020",
-      "texts": ["item1", "item2", "item3"]
+      "texts": ["A KOREA 창업놀이터 최우수상"]
     },
     {
       "title": "2019",
-      "texts": ["item1", "item2", "item3"]
+      "texts": ["삼성 SDS-JA 스마트 해커톤 대상 수상", "STAC(SK Smarteen App Challenge) 미래산업부문 대상 수상"]
     },
     {
       "title": "2018",
-      "texts": ["item1", "item2", "item3"]
+      "texts": ["2018 안산시 청소년 Software-UP Programming Contest 우수상", "디지털 헬스케어해커톤 2018 장려상", "세상을 변화시키는 ICT 임팩터톤 2등 디캠프상"]
     },
     {
       "title": "2017",
-      "texts": ["item1", "item2", "item3"]
+      "texts": ["ICT 어워드코리아 알고리즘 프로그래밍 종목 장려상"]
     },
     {
       "title": "2016",
-      "texts": ["item1", "item2", "item3"]
+      "texts": ["STAC(SK Smarteen App Challenge) 우수상 수상"]
+    }
+    {
+      "title": "2015",
+      "texts": ["임플루드 창업동아리 설립"]
     }
   ]
 }
