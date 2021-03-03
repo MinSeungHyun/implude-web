@@ -7,7 +7,7 @@ const links = [
   {
     icon: './static/facebook.svg',
     title: '페이스북 페이지',
-    link: 'fb.com/implude',
+    link: <A href = 'fb.com/implude'> fb.com/implude </A>,
   },
   {
     icon: './static/messenger.svg',
@@ -17,12 +17,12 @@ const links = [
   {
     icon: './static/kakaotalk.svg',
     title: '카카오톡 1:1 오픈채팅',
-    link: 'open.kakao.com/o/sdNUzv0c',
+    link: <A href = 'open.kakao.com/o/sdNUzv0c'> open.kakao.com/o/sdNUzv0c </A>,
   },
   {
     icon: './static/instagram.svg',
     title: '인스타그램',
-    link: 'instagram.com/dimigoimplude',
+    link: <A href = 'instagram.com/dimigoimplude'> instagram.com/dimigoimplude </A>,
   },
 ];
 
