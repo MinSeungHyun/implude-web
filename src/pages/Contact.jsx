@@ -2,15 +2,12 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar';
 import LinkItem from '../components/LinkItem';
-import { Link } from 'react-router-dom';
 
 const links = [
   {
     icon: './static/facebook.svg',
     title: '페이스북 페이지',
-    <Link to="./이동할 페이지 경로/파일명"> 
-    link: 'fb.com/implude'
-    <Link>
+    link: 'fb.com/implude',
   },
   {
     icon: './static/messenger.svg',
