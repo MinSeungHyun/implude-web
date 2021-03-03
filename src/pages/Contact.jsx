@@ -12,7 +12,7 @@ const links = [
   {
     icon: './static/messenger.svg',
     title: '페이스북 메신저',
-    link: 'm.me/implude',
+    link: <A href = 'm.me/implude'> m.me/implude </A>,
   },
   {
     icon: './static/kakaotalk.svg',
