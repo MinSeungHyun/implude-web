@@ -22,7 +22,7 @@ const links = [
   {
     icon: './static/instagram.svg',
     title: '인스타그램',
-    link: dimi,
+    link: <A href = 'instagram.com/dimigoimplude'> instagram.com/dimigoimplude </A>,
   },
 ];
 
