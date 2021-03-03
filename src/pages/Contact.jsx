@@ -17,7 +17,7 @@ const links = [
   {
     icon: './static/kakaotalk.svg',
     title: '카카오톡 1:1 오픈채팅',
-    link: 'open.kakao.com/o/sVon7SXb',
+    link: 'open.kakao.com/o/sdNUzv0c',
   },
   {
     icon: './static/instagram.svg',
