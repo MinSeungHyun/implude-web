@@ -7,22 +7,22 @@ const links = [
   {
     icon: './static/facebook.svg',
     title: '페이스북 페이지',
-    link: <A href = 'fb.com/implude'> fb.com/implude </A>,
+    link: 'fb.com/implude',
   },
   {
     icon: './static/messenger.svg',
     title: '페이스북 메신저',
-    link: <A href = 'm.me/implude'> m.me/implude </A>,
+    link: 'm.me/implude',
   },
   {
     icon: './static/kakaotalk.svg',
     title: '카카오톡 1:1 오픈채팅',
-    link: <A href = 'open.kakao.com/o/sdNUzv0c'> open.kakao.com/o/sdNUzv0c </A>,
+    link: 'open.kakao.com/o/sdNUzv0c',
   },
   {
     icon: './static/instagram.svg',
     title: '인스타그램',
-    link: <A href = 'instagram.com/dimigoimplude'> instagram.com/dimigoimplude </A>,
+    link:'instagram.com/dimigoimplude',
   },
 ];
 
