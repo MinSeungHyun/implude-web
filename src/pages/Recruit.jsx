@@ -47,7 +47,7 @@ const ContentWrapper = styled.div`
   div,
   span {
     width: 100%;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 900;
     letter-spacing: 3px;
     line-height: 1.3;
@@ -75,18 +75,18 @@ const ApplyButton = styled.a`
   margin-top: 3rem;
   background: var(--primary-color);
   color: white;
-  padding: 10px 20px;
+  padding: 10px 40px;
   border-radius: 100px;
   line-height: 1.4;
-  box-shadow: 0 3px 9px 0 rgba(55, 108, 230, 0.5);
+  box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.2s ease;
 
   &:hover {
-    box-shadow: 0 1px 5px 0 rgba(55, 108, 230, 0.5);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
   }
 
   &:active {
-    box-shadow: 0 1px 5px 0 rgba(55, 108, 230, 0.3);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
   }
 
   img {
