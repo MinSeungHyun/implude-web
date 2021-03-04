@@ -58,5 +58,5 @@ const Description = styled.p`
   white-space: nowrap;
   font-size: 1rem;
   margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
 `;
