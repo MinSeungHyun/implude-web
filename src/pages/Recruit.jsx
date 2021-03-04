@@ -3,7 +3,7 @@ import TextTransition from 'react-text-transition';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar';
 
-const TEXTS = ['열정적인', '새로움을 두려워 하지 않는', '긍정적인', '배우는 것을 즐기는'];
+const TEXTS = ['열정적인', '새로움을 두려워 하지 않는', '긍정적인', '배우는 것을 즐기는', '당신을'];
 
 const RecruitPage = () => {
   const [index, setIndex] = useState(0);
@@ -21,7 +21,7 @@ const RecruitPage = () => {
         <Title>우리는</Title>
         <TextTransition text={TEXTS[index % TEXTS.length]} />
         <Title>사람을 원합니다.</Title>
-        <ApplyButton href="https://dimigo.in">
+        <ApplyButton href="https://dimigo.in/circle/">
           지원하기
           <img src="./static/arrow_forward.svg" alt="Arrow" />
         </ApplyButton>
