@@ -18,9 +18,6 @@ const LandingPage = () => (
           <br />
           <MediaQuery minWidth={Constants.tabletScreenWidth + 1}>
             <SubTitle>{SUB_TITLE}</SubTitle>
-            <button onClick={activateLasers}>
-              Activate Lasers
-            </button>
           </MediaQuery>
           <MediaQuery maxWidth={Constants.tabletScreenWidth}>
             <EqualSpaceSubTitle>
