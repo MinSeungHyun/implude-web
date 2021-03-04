@@ -158,7 +158,7 @@ const LogoSymbol = styled.div`
 `;
 
 const NotionButton = styled.a`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: fit-content;
   display: flex;
   margin-top: 3rem;
