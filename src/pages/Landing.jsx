@@ -26,7 +26,7 @@ const LandingPage = () => (
               ))}
             </EqualSpaceSubTitle>
           </MediaQuery>
-          <NotionButton href="https://google.com">
+          <NotionButton href="https://google.com" target="_blank">
             자세히 보기
           </NotionButton>
         </Title>
@@ -158,6 +158,8 @@ const LogoSymbol = styled.div`
 `;
 
 const NotionButton = styled.a`
+  font-size: 2rem;
+  width: fit-content;
   display: flex;
   margin-top: 3rem;
   background: var(--primary-color);
@@ -172,8 +174,5 @@ const NotionButton = styled.a`
   }
   &:active {
     box-shadow: 0 1px 5px 0 rgba(55, 108, 230, 0.3);
-  }
-  img {
-    margin-left: 5px;
   }
 `;
