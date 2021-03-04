@@ -158,19 +158,19 @@ const LogoSymbol = styled.div`
 `;
 
 const NotionButton = styled.a`
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: fit-content;
   display: flex;
   margin-top: 3rem;
   background: var(--primary-color);
   color: white;
-  padding: 10px 20px;
+  padding: 10px 40px;
   border-radius: 100px;
   line-height: 1.4;
-  box-shadow: 0 3px 9px 0 rgba(55, 108, 230, 0.5);
+  box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.2s ease;
   &:hover {
-    box-shadow: 0 1px 5px 0 rgba(55, 108, 230, 0.5);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
   }
   &:active {
     box-shadow: 0 1px 5px 0 rgba(55, 108, 230, 0.3);
