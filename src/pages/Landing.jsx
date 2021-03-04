@@ -26,9 +26,9 @@ const LandingPage = () => (
               ))}
             </EqualSpaceSubTitle>
           </MediaQuery>
-          <button onClick={activateLasers}>
-            Activate Lasers
-          </button>
+          <NotionButton href="https://google.com">
+            자세히 보기
+          </NotionButton>
         </Title>
       </TitleWrapper>
       <MediaQuery minWidth={Constants.tabletScreenWidth + 1}>
@@ -154,5 +154,26 @@ const LogoSymbol = styled.div`
   @media (max-width: ${Constants.mobileScreenWidth + 'px'}) {
     width: 1.9rem;
     height: 1.9rem;
+  }
+`;
+
+const NotionButton = styled.a`
+  display: flex;
+  margin-top: 3rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 100px;
+  line-height: 1.4;
+  box-shadow: 0 3px 9px 0 rgba(55, 108, 230, 0.5);
+  transition: box-shadow 0.2s ease;
+  &:hover {
+    box-shadow: 0 1px 5px 0 rgba(55, 108, 230, 0.5);
+  }
+  &:active {
+    box-shadow: 0 1px 5px 0 rgba(55, 108, 230, 0.3);
+  }
+  img {
+    margin-left: 5px;
   }
 `;
