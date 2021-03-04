@@ -3,7 +3,7 @@ import TextTransition from 'react-text-transition';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar';
 
-const TEXTS = ['열정적인', '새로움을 두려워 하지 않는', '긍정적인', '배우는 것을 즐기는', '당신을'];
+const TEXTS = ['열정적인', '새로움을 두려워 하지 않는', '긍정적인', '배우는 것을 즐기는', '당신같은'];
 
 const RecruitPage = () => {
   const [index, setIndex] = useState(0);
