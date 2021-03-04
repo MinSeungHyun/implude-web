@@ -26,6 +26,9 @@ const LandingPage = () => (
               ))}
             </EqualSpaceSubTitle>
           </MediaQuery>
+          <button onClick={activateLasers}>
+            Activate Lasers
+          </button>
         </Title>
       </TitleWrapper>
       <MediaQuery minWidth={Constants.tabletScreenWidth + 1}>
