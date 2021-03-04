@@ -21,6 +21,9 @@ const AboutPage = () => (
 
 export default AboutPage;
 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
 const Content = styled.div`
   width: 100%;
   height: 100vh;
@@ -58,4 +61,5 @@ const Description = styled.p`
   white-space: nowrap;
   font-size: 1rem;
   margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
 `;
