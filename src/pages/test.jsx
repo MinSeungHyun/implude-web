@@ -5,5 +5,5 @@ import MediaQuery from 'react-responsive';
 import { Constants } from '../components/GlobalStyles';
 
 const LandingPage = () => (
-  <img src=""></img>
+  <img src="./static/hoxy.gif"></img>
   }
