@@ -3,7 +3,7 @@ import TextTransition from 'react-text-transition';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar';
 
-const TEXTS = ['열정적인', '새로움을 두려워 하지 않는', '긍정적인', '배우는 것을 즐기는', '당신같은'];
+const TEXTS = ['당신도 앱 만들고싶다면?','앱 디자인에 관심이 있다면?','색조합 하나는 기가막히게 잘 뽑는다면?','C나 Python을 해본적 있다면?','기획의 장인이라면?','임플루드가 궁금하다면?','대회 나가서 수상하고싶다면?','가족같은 선배를 원한다면?','디자인을 배우고싶다면?','개발을 배우고싶다면?','백엔드 할 수 있다면?','프론트엔드 할 수 있다면?','도대체 일반동아리 동장은 어떻게 생겼을까 궁금하다면?'];
 
 const RecruitPage = () => {
   const [index, setIndex] = useState(0);
@@ -18,9 +18,9 @@ const RecruitPage = () => {
     <>
       <NavBar />
       <ContentWrapper>
-        <Title>우리는</Title>
+        <Title>혹시</Title>
         <TextTransition text={TEXTS[index % TEXTS.length]} />
-        <Title>사람을 원합니다.</Title>
+        <Title>지금 바로 지원하세요.</Title>
         <ApplyButton href="https://dimigo.in/circle/">
           지원하기
           <img src="./static/arrow_forward.svg" alt="Arrow" />
