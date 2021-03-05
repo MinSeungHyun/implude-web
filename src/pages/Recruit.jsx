@@ -3,7 +3,7 @@ import TextTransition from 'react-text-transition';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar';
 
-const TEXTS = ['당신도 앱 만들고싶다면?','앱 디자인에 관심이 있다면?','색조합 하나는 기가막히게 잘 뽑는다면?','C나 Python을 해본적 있다면?','기획의 장인이라면?','임플루드가 궁금하다면?','대회 나가서 수상하고싶다면?','가족같은 선배를 원한다면?','디자인을 배우고싶다면?','개발을 배우고싶다면?','백엔드 할 수 있다면?','프론트엔드 할 수 있다면?','도대체 일반동아리 동장은 어떻게 생겼을까 궁금하다면?'];
+const TEXTS = ['당신도 앱 만들고 싶다면?','앱 디자인에 관심이 있다면?','색조합 하나는 기가막히게 잘 뽑는다면?','C나 Python을 해본적 있다면?','기획의 장인이라면?','대회 나가서 수상하고싶다면?','가족같은 선배를 원한다면?','디자인을 배우고싶다면?','개발을 배우고싶다면?','도대체 일반동아리 동장은 어떻게 생겼을까 궁금하다면?'];
 
 const RecruitPage = () => {
   const [index, setIndex] = useState(0);
