@@ -26,7 +26,7 @@ const LandingPage = () => (
               ))}
             </EqualSpaceSubTitle>
           </MediaQuery>
-          <NotionButton href="https://www.notion.so/implude/IMPLUDE-cf1e3d9853dc476485b79109835769e9" target="_blank">
+          <NotionButton href="https://www.notion.so/IMPLUDE-cf1e3d9853dc476485b79109835769e9" target="_blank">
             자세히 보기
           </NotionButton>
         </Title>
